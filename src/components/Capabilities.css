@@ -1,0 +1,67 @@
+.caps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--panel);
+}
+.cap {
+  padding: 26px 24px 24px;
+  border-left: 1px solid var(--line);
+}
+.cap:first-child {
+  border-left: 0;
+}
+.cap .ic {
+  font: 500 20px/1 var(--mono);
+  color: var(--amber);
+  margin-bottom: 18px;
+  height: 22px;
+}
+.cap h3 {
+  font: 600 16.5px/1.35 var(--sans);
+  margin-bottom: 8px;
+}
+.cap p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-2);
+  margin-bottom: 14px;
+}
+.cap .ev {
+  font: 400 12.5px var(--mono);
+  color: var(--muted);
+}
+.cap .ev a {
+  color: var(--cyan);
+  text-decoration: none;
+  border-bottom: 1px dotted color-mix(in srgb, var(--cyan) 55%, transparent);
+}
+.cap .ev a:hover {
+  border-bottom-style: solid;
+}
+
+@media (max-width: 980px) {
+  .caps {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cap:nth-child(3) {
+    border-left: 0;
+  }
+  .cap:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+}
+@media (max-width: 520px) {
+  .caps {
+    grid-template-columns: 1fr;
+  }
+  .cap {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .cap:first-child {
+    border-top: 0;
+  }
+}

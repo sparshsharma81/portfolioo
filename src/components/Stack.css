@@ -1,0 +1,126 @@
+.stack-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+.core {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+.core th {
+  text-align: left;
+  font: 500 11.5px var(--mono);
+  color: var(--muted);
+  padding: 0 12px 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.core td {
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px dashed var(--line);
+  vertical-align: baseline;
+}
+.core td:first-child {
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+.core td:nth-child(2) {
+  color: var(--text-2);
+}
+.core td:last-child,
+.core th:last-child {
+  text-align: right;
+  font: 400 13px var(--mono);
+  color: var(--muted);
+  padding-right: 0;
+}
+.also {
+  margin-top: 26px;
+  display: grid;
+  gap: 10px;
+}
+.also div {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 12px;
+  font-size: 14.5px;
+  color: var(--text-2);
+}
+.also span {
+  font: 500 12px/1.9 var(--mono);
+  color: var(--amber);
+}
+
+.cloc {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cloc-body {
+  padding: 18px 20px 16px;
+  font: 400 13px/1.7 var(--mono);
+}
+.cloc-cmd {
+  color: var(--cyan);
+  margin-bottom: 10px;
+}
+.cloc-cmd b {
+  color: var(--amber);
+  font-weight: 500;
+}
+.cl {
+  display: grid;
+  grid-template-columns: 96px 44px 62px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+.cl.head {
+  color: var(--muted);
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+.cl .n {
+  text-align: right;
+  color: var(--text-2);
+}
+.cl .bar-h {
+  height: 8px;
+  border-radius: 2px;
+  background: var(--amber);
+  opacity: 0.85;
+}
+.cl.sum {
+  border-top: 1px dashed var(--line);
+  margin-top: 6px;
+  padding-top: 6px;
+  color: var(--amber);
+}
+.cl.sum .n {
+  color: var(--amber);
+}
+.cloc-note {
+  font: 400 11.5px/1.6 var(--mono);
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+@media (max-width: 980px) {
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 760px) {
+  .cl {
+    grid-template-columns: 86px 36px 56px minmax(0, 1fr);
+    gap: 8px;
+    font-size: 12px;
+  }
+  .also div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

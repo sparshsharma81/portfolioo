@@ -1,0 +1,94 @@
+.archive {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.archive table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+.archive caption {
+  text-align: left;
+  padding: 14px 20px;
+  font: 400 12px var(--mono);
+  color: var(--muted);
+  background: var(--panel-2);
+  border-bottom: 1px solid var(--line);
+}
+.archive caption b {
+  color: var(--amber);
+  font-weight: 500;
+}
+.archive th {
+  text-align: left;
+  font: 500 11.5px var(--mono);
+  color: var(--muted);
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.archive td {
+  padding: 12px 20px;
+  border-bottom: 1px dashed var(--line);
+  vertical-align: baseline;
+  color: var(--text-2);
+}
+.archive tr:last-child td {
+  border-bottom: 0;
+}
+.archive tbody tr:hover {
+  background: var(--panel);
+}
+.archive .yr {
+  font: 400 13px var(--mono);
+  color: var(--muted);
+  width: 72px;
+}
+.archive .pj {
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+.archive .bw {
+  font: 400 12.5px var(--mono);
+  color: var(--muted);
+}
+.archive .cm {
+  font: 400 13px var(--mono);
+  color: var(--text-2);
+  text-align: right;
+  width: 90px;
+}
+.archive .lk {
+  text-align: right;
+  white-space: nowrap;
+  font: 500 12.5px var(--mono);
+}
+.archive .lk a {
+  color: var(--amber);
+  text-decoration: none;
+  margin-left: 14px;
+}
+.archive .lk a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .archive .bw {
+    display: none;
+  }
+  .archive td,
+  .archive th {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .archive .cm {
+    width: auto;
+  }
+}
+@media (max-width: 520px) {
+  .archive .lk a {
+    display: block;
+    margin: 0 0 2px;
+  }
+}
